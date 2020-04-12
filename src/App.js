@@ -7,13 +7,17 @@ function App() {
     <div className="App">
       <h1>Weather App</h1>
       <footer>
+        This project was coded by{" "}
+        <a href="http://sarasarmento.co" target="_blank">
+          Sara Sarmento
+        </a>{" "}
+        and is open sourced on{" "}
         <a
           href="https://github.com/sarafsarmento/react-weatherapp"
           target="_blank"
         >
-          Open-source code
-        </a>{" "}
-        by Sara Sarmento
+          Github
+        </a>
       </footer>
     </div>
   );

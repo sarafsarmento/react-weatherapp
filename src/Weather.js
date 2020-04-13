@@ -5,6 +5,7 @@ import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import FormattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -12,7 +13,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
-      date: "Sunday 00:19",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: "https://sad-aryabhata-ad11d0.netlify.com/media/04n@2x.png",
       wind: response.data.wind.speed,
@@ -47,7 +48,7 @@ export default function Weather(props) {
         <h1>{weatherData.city}</h1>
         <ul>
           <li>
-            Last updated: <span id="date">{weatherData.date}</span>
+            <FormattedDate date={weatherData.date} />
           </li>
           <li className="text-capitalize">{weatherData.description}</li>
         </ul>

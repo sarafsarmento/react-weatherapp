@@ -17,6 +17,7 @@ function App() {
         <a
           href="https://github.com/sarafsarmento/react-weatherapp"
           target="_blank"
+          className="active"
         >
           Github
         </a>

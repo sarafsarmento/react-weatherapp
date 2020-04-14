@@ -3,6 +3,7 @@ import "./Weather.css";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import FormattedDate from "./FormattedDate";
+import WeatherTemperature from "./WeatherTemperature";
 
 export default function WeatherInfo(props) {
   return (
@@ -22,18 +23,7 @@ export default function WeatherInfo(props) {
               alt={props.data.description}
               id="weather-icon"
             />
-            <strong id="weather-temperature">
-              {Math.round(props.data.temperature)}
-            </strong>
-            <span className="units">
-              <a href="/" id="celsius-link" className="active">
-                ºC
-              </a>
-              |
-              <a href="/" id="fahrenheit-link" className="active">
-                ºF
-              </a>
-            </span>
+            <WeatherTemperature celsius={props.data.temperature} />
           </div>
         </Col>
         <Col sm={4}>

@@ -10,7 +10,7 @@ function App() {
       </div>
       <footer>
         This project was coded by{" "}
-        <a href="http://sarasarmento.co" target="_blank">
+        <a href="http://sarafsarmento.com" target="_blank">
           Sara Sarmento
         </a>{" "}
         and is open sourced on{" "}
